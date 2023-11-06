@@ -54,6 +54,7 @@ int print_string(va_list varg)
 int print_char(va_list varg)
 {
 	char c = va_arg(varg, int);
+
 	_putchar(c); /*Print a single char*/
 	return (1);
 }
@@ -69,7 +70,7 @@ int print_integer(va_list args)
 	int base = 10;
 
 	if (num < 0) /*checks if negative */
-       	{
+	{
 		_putchar('-');
 		num *= -1;
 	}
