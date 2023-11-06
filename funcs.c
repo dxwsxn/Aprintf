@@ -71,7 +71,7 @@ int print_integer(va_list args, int printed_nums)
 	int divisor = 1;
 	int temp = num;
 	int digit;
-
+	
 	if (num < 0) /* dealing with negatives */
 	{
 		putchar('-');
