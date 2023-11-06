@@ -65,7 +65,7 @@ int print_char(va_list varg)
  *
  * Return: printed numbers
  */
-int print_integer(vargs, int printed_nums)
+int print_integer(va_list args, int printed_nums)
 {
 	int num = va_arg(args, int);
 	int divisor = 1;
