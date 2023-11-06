@@ -65,32 +65,22 @@ int print_char(va_list varg)
  *
  * Return: printed numbers
  */
-int print_integer(va_list args, int printed_nums)
+int print_integer(va_list args)
 {
 	int num = va_arg(args, int);
-	int divisor = 1;
-	int temp = num;
 	int digit;
-	
-	if (num < 0) /* dealing with negatives */
+	int base = 10;
+
+	if (num < 0) /*checks if negative */
 	{
-		putchar('-');
-		num = -num;
+		_putchar('-');
+		num *= -1;
 	}
-	if (temp = num)
+	while (num >= base) /* iterates through by 10 to determine number */
 	{
-		while (temp > 9) /* determines how big the number is */
-		{
-			temp /= 10; /*divides by 10 moving to the next place */
-			divisor *= 10; /*keeps track of place value */
-		}
-		while (divisor != 0) /* prints the digits if they are there */
-		{
-			int digit = num / divisor; /*calculates the place value */
-			putchar('0' + digit); 
-			num %= divisor; /* what is left of digit */
-			divisor /= 10;
-		}
+		digit = num / base;
+		_putchar(digit + '0');
+		num %= base;
+		base *= 10;
 	}
-	return (printed_nums);
 }
