@@ -65,14 +65,15 @@ int print_char(va_list varg)
 int print_integer(va_list args)
 {
 	int num = va_arg(args, int);
+	int digit;
+	int base = 10;
 
 	if (num < 0) /*checks if negative */
        	{
 		_putchar('-');
 		num *= -1;
 	}
-	int digit;
-	int base = 10;
+
 	while (num >= base) /* iterates through by 10 to determine number */
 	{
 		digit = num / base;
