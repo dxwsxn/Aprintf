@@ -15,7 +15,7 @@ typedef struct form
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_sym(char s);
+int print_ec(char c);
 int print_string(va_list varg);
 int print_char(va_list varg);
 int print_integer(va_list varg);
