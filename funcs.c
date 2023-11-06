@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_ec - Prints spec char such as '%' and '!', the edge case
- * @s: character after %
+ * @c: character after %
  * Return: Returns number based on input
  */
 int print_ec(char c)
@@ -60,7 +60,7 @@ int print_char(va_list varg)
 }
 /**
  * print_integer - prints integer to the output
- * @args:
+ * @args: arguments
  * Return: 0 on success
  */
 int print_integer(va_list args)
@@ -82,6 +82,6 @@ int print_integer(va_list args)
 		num %= base;
 		base *= 10;
 	}
-	return (digit);
+	return (0);
 }
 
