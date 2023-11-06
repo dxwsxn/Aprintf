@@ -1,0 +1,42 @@
+NAME
+
+`_printf` - formatted output
+
+SYNOPSIS
+
+`_printf` format [arguments]
+
+DESCRIPTION
+
+The `_printf` function prints formatted output to std-out.
+The format string is a string that contains special
+sequences that are replaced with the corresponding arguments.
+
+FORMAT SEQUNCES
+
+%c: Prints  the argument as a character.
+%d: Prints the argument as a decimal number.
+%i: Prints the argument as an integer.
+%s: Prints the argument as a string.
+
+EXAMPLES
+
+`_printf`("The character 'a' is %c.0, 'a');
+`_printf`("The decimal number 123 is %d.0, 123);
+`_printf`("The integer  123  is %i.0,  123);
+`_printf`("The string "Hello, world!" is %s.0, "Hello, world!");
+
+RETURN VALUE
+
+The `_printf` function returns the number  of  characters
+printed, not including the terminating null byte (' ').
+
+ERRORS
+
+The `_printf` function may fail for the following reasons:
+* The format string is invalid.
+* An error occurs while accessing the file system.
+
+AUTHORS
+
+Dawson Heflin, Alyssa McNatt, and Supa Woodard
