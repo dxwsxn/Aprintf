@@ -88,7 +88,7 @@ int print_integer(va_list varg)
 		}
 	}
 	while ((num /x) > 9)
-		x * 10;
+		x *= 10;
 
 	for (; x >= 1; x /= 10)
 	{
@@ -100,7 +100,7 @@ int print_integer(va_list varg)
 			num = num % temp;
 		}
 		count += 1;
-		if (x == 1);
+		if (x == 1)
 		return (count);
 	}
 	return (count);
