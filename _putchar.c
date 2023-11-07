@@ -2,7 +2,7 @@
 
 /**
  * _putchar - writes char to std output
- * c: what is being written
+ * @c: what is being written
  *
  * Return: 1 when good, -1 on error
  */

@@ -60,9 +60,7 @@ int print_char(va_list varg)
 }
 /**
  * print_integer - prints integer to output
- * @arg: number of args
- * @printed_nums: the printed number
- *
+ * @varg: arguement
  * Return: printed numbers
  */
 int print_integer(va_list varg)
@@ -84,15 +82,15 @@ int print_integer(va_list varg)
 		{
 			_putchar('-');
 			num *= -1;
-			count ++;
+			count++;
 		}
 	}
-	while ((num /x) > 9)
+	while ((num / x) > 9)
 		x *= 10;
 
 	for (; x >= 1; x /= 10)
 	{
-		temp = (num /x);
+		temp = (num / x);
 		_putchar(temp + 48);
 		temp *= x;
 		if (temp != 0)
