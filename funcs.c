@@ -65,32 +65,43 @@ int print_char(va_list varg)
  *
  * Return: printed numbers
  */
-int print_integer(va_list args, int printed_nums)
+int print_integer(va_list varg)
 {
-	int num = va_arg(args, int);
-	int divisor = 1;
-	int temp = num;
-	int digit;
+	int num = va_arg(varg, long int);
+	int x = 1, temp, count = 0;
 
 	if (num < 0) /* negatives */
 	{
-		putchar('-');
-		num = -num;
+		if (num == INT_MIN) /* if int is minimum */
+		{
+			_putchar('-');
+			_putchar(2 + 48);
+			num = num % 2000000000;
+			num *= -1;
+			count += 2;
+		}
+		else
+		{
+			_putchar('-');
+			num *= -1;
+			count ++;
+		}
 	}
-	if (temp = num)
+	while ((num /x) > 9)
+		x * 10;
+
+	for (; x >= 1; x /= 10)
 	{
-		while (temp > 9)
+		temp = (num /x);
+		_putchar(temp + 48);
+		temp *= x;
+		if (temp != 0)
 		{
-			temp /= 10;
-			divisor *= 10;
+			num = num % temp;
 		}
-		while (divisor != 0)
-		{
-			int digit = num / divisor;
-			putchar ('0' + digit);
-			num %= divisor;
-			divisor /= 10;
-		}
+		count += 1;
+		if (x == 1);
+		return (count);
 	}
-	return (printed_nums);
+	return (count);
 }
