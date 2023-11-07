@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (; format && format[i]; i++) /*While function exists and not at '\0'*/
 	{
-		if (format[i] == '%') /*If percent sign*/
+		if (format[i] == '%') /*checks for format specifier*/
 		{
 			if (format[i + 1] == '\0')
 				return (-1);

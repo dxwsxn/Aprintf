@@ -72,32 +72,32 @@ int print_integer(va_list varg)
 	{
 		if (num == INT_MIN) /* if int is minimum */
 		{
-			_putchar('-');
+			_putchar('-'); /* prints - sign */
 			_putchar(2 + 48);
-			num = num % 2000000000;
-			num *= -1;
-			count += 2;
+			num = num % 2000000000; /* modulo operation */
+			num *= -1; /* converts int back to positive */
+			count += 2; /*increments by 2 for the digits added */
 		}
 		else
 		{
-			_putchar('-');
-			num *= -1;
+			_putchar('-'); /* adds the - */
+			num *= -1; /* makes positive to run normal */
 			count++;
 		}
 	}
-	while ((num / x) > 9)
+	while ((num / x) > 9) /* makes int highest number needed */
 		x *= 10;
 
-	for (; x >= 1; x /= 10)
+	for (; x >= 1; x /= 10) /*divides by 10 to determine the number place */
 	{
-		temp = (num / x);
-		_putchar(temp + 48);
-		temp *= x;
-		if (temp != 0)
+		temp = (num / x); /* set temp = to first num in int */
+		_putchar(temp + 48); /* prints first number of int */
+		temp *= x; /*divides x by temp */
+		if (temp != 0) /* checking if temp = 0 */
 		{
 			num = num % temp;
 		}
-		count += 1;
+		count += 1; /* gives count to return */
 		if (x == 1)
 		return (count);
 	}
